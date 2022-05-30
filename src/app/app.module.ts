@@ -11,7 +11,6 @@ import { TodoListComponent } from './todo-list/todo-list.component';
 import { AddComponent } from './todo/add/add.component';
 import { ProductListComponent } from './products/product-list/product-list.component';
 import { ProductCardComponent } from './products/product-card/product-card.component';
-import { ProductFavouriteComponent } from './products/product-favourite/product-favourite.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +23,6 @@ import { ProductFavouriteComponent } from './products/product-favourite/product-
     AddComponent,
     ProductListComponent,
     ProductCardComponent,
-    ProductFavouriteComponent
   ],
   imports: [
     BrowserModule,

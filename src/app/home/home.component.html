@@ -30,17 +30,5 @@
           </ul>
         </li>
       </ul>
-      <ul>
-
-        <li *ngFor="let person of peopleByCountry" [ngSwitch]="person.country">
-      
-          <p *ngSwitchCase="'US'" class="text-danger"> {{person.country}}</p>
-          <p *ngSwitchCase="'UK'" class="text-primary">{{person.country}}</p>
-          <!-- MARS -->
-          <p *ngSwitchCase="'MARS'" class="text-success">{{person.country}}</p>
-          <p *ngSwitchDefault>{{person.country}}</p>
-      
-        </li>
-      </ul>
 </body>
 </html>

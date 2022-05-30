@@ -3,7 +3,8 @@
   </ul>
 <div class="container">
     <div class="row">
-        <app-product-card *ngFor="let product of allProducts" [product]="product" class="col-md-4"></app-product-card>
+        <h2>{{slectedProduct?.description}}</h2>
+        <app-product-card *ngFor="let product of allProducts" [product]="product" (slectedProduct)="prod($event)"class="col-md-4"></app-product-card>
     </div>
 
 </div>

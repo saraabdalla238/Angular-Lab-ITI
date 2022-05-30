@@ -8,10 +8,14 @@ import { ProductsServeService } from '../products-serve.service';
 })
 export class ProductListComponent implements OnInit {
   allProducts?: Iproduct[];
+  slectedProduct?:Iproduct;
 
   constructor(private productServe:ProductsServeService) { }
 
   ngOnInit(): void {
     this.allProducts = this.productServe.getAllProducts() 
+  }
+  prod(e:any){
+    this.slectedProduct=e;
   }
 }
