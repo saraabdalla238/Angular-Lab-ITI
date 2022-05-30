@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+         
+  padding-bottom: 40rem;
+
+
+  padding: 2rem;
+  margin: 0 0 2rem 0;
+}
+        
+    </style>
+</head>
+<body>
+    <ul>
+        <li *ngFor="let c of peopleByCountry">{{c.country}}
+        </li>
+      </ul>
+  
+      <ul>
+        <li *ngFor="let c of peopleByCountry">{{c.country}}
+          <ul>
+            <li *ngFor="let p of c.people">{{p.name}}</li>
+          </ul>
+        </li>
+      </ul>
+      <ul>
+
+        <li *ngFor="let person of peopleByCountry" [ngSwitch]="person.country">
+      
+          <p *ngSwitchCase="'US'" class="text-danger"> {{person.country}}</p>
+          <p *ngSwitchCase="'UK'" class="text-primary">{{person.country}}</p>
+          <!-- MARS -->
+          <p *ngSwitchCase="'MARS'" class="text-success">{{person.country}}</p>
+          <p *ngSwitchDefault>{{person.country}}</p>
+      
+        </li>
+      </ul>
+</body>
+</html>

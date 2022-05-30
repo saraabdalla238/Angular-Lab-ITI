@@ -1,0 +1,9 @@
+<ul>
+    <li *ngFor="let product of allProducts">{{product.id}}--{{product.title}}</li>
+  </ul>
+<div class="container">
+    <div class="row">
+        <app-product-card *ngFor="let product of allProducts" [product]="product" class="col-md-4"></app-product-card>
+    </div>
+
+</div>
